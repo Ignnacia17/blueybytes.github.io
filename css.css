@@ -1,8 +1,63 @@
-.blog-texto {
-  margin: 32px 24px 24px 32px;    /* margen externo (puedes ajustar valores) */
-  padding: 24px;                  /* espacio interno, separa el texto del borde */
-  background-color: #f4fafd;      /* fondo muy suave y claro */
-  border-radius: 16px;            /* bordes redondeados */
-  box-shadow: 0 4px 16px #b3e1fa22; /* sombra ligera */
-  border-left: 6px solid #4daae7; /* franja decorativa a la izquierda */
+.card-title {
+  font-size: 2.6rem;
+  color: #2196f3;
+  font-weight: bold;
 }
+
+.blog-texto {
+  margin: 32px 32px 24px 32px;
+  padding: 24px;
+  background-color: #f4fafd;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px #b3e1fa22;
+  border-left: 6px solid #4daae7;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Más espacio entre la imagen flotante y el texto */
+.blog-texto img.float-end {
+  margin-left: 32px;
+  margin-bottom: 100px;
+  margin-top: 80px; /* imagen más abajo respecto al texto */
+  max-width: 420px;
+  display: block;
+}
+
+/* Mejor espaciado para párrafos */
+.blog-texto p {
+  margin-right: 15px;
+  padding-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .blog-texto {
+    padding: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-texto {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 14px;
+  }
+  .blog-texto img.float-end {
+    float: none !important;
+    display: block;
+    margin: 24px auto 18px auto;
+    max-width: 95vw;
+  }
+  .blog-texto p {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+
