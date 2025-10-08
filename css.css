@@ -1,0 +1,8 @@
+.blog-texto {
+  margin: 32px 24px 24px 32px;    /* margen externo (puedes ajustar valores) */
+  padding: 24px;                  /* espacio interno, separa el texto del borde */
+  background-color: #f4fafd;      /* fondo muy suave y claro */
+  border-radius: 16px;            /* bordes redondeados */
+  box-shadow: 0 4px 16px #b3e1fa22; /* sombra ligera */
+  border-left: 6px solid #4daae7; /* franja decorativa a la izquierda */
+}
