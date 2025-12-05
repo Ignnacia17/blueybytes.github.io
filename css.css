@@ -1,105 +1,132 @@
-/* --- CONFIGURACIÓN GENERAL --- */
+/* --- 1. CONFIGURACIÓN GENERAL Y FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
 :root {
-  /* Paleta de colores BlueyBytes */
-  --color-fondo: #eef7ff;     /* Azul muy pálido para el fondo */
-  --color-primary: #4daae7;   /* Azul vibrante del logo */
-  --color-secondary: #88bcf0; /* Azul suave */
-  --color-texto: #445566;     /* Gris azulado para leer mejor que el negro puro */
+  /* Paleta de colores más vibrante */
+  --color-primary: #0099ff;     /* Azul eléctrico */
+  --color-secondary: #50a6fd;   /* Azul cielo */
+  --color-accent: #ff6b6b;      /* Rojo suave para detalles */
+  --color-texto: #2c3e50;       /* Azul oscuro casi negro */
   --color-blanco: #ffffff;
-  --borde-radio: 20px;        /* Bordes redondeados para un look suave */
+  --borde-radio: 15px;          /* Bordes redondeados pero compactos */
+  --sombra-suave: 0 4px 6px rgba(0,0,0,0.1);
+  --sombra-fuerte: 0 10px 15px rgba(0,153,255, 0.2);
 }
 
 body {
-  background-color: var(--color-fondo);
-  font-family: 'Quicksand', sans-serif; /* Fuente amigable */
+  /* Fondo con un degradado sutil en lugar de color plano */
+  background: linear-gradient(180deg, #f0f8ff 0%, #e6f2ff 100%);
+  font-family: 'Quicksand', sans-serif;
   color: var(--color-texto);
-  line-height: 1.6;
+  font-size: 0.95rem; /* Texto un pelín más compacto */
 }
 
-/* --- NAVBAR MEJORADO --- */
+/* --- 2. HEADER COMPACTO Y MODERNO --- */
+header {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  color: white;
+  padding: 1.5rem 0; /* Menos altura */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--sombra-suave);
+}
+
+header h1 {
+  font-size: 2rem; /* Título principal más contenido */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* --- 3. BARRA DE NAVEGACIÓN (NAVBAR) --- */
 .navbar {
-  background-color: var(--color-blanco) !important;
-  box-shadow: 0 4px 15px rgba(77, 170, 231, 0.15); /* Sombra suave azulada */
-  padding: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.9) !important; /* Semi-transparente */
+  backdrop-filter: blur(10px); /* Efecto vidrio */
+  padding: 0.5rem 0; /* Barra más delgada */
+  border-radius: 50px;
+  margin: -25px auto 20px auto; /* Sube la barra para que "flote" sobre el header */
+  width: 90%; /* No ocupa todo el ancho */
+  box-shadow: var(--sombra-suave);
+  max-width: 800px; /* Que no se estire demasiado */
 }
 
 .navbar-nav .nav-link {
   color: var(--color-texto) !important;
   font-weight: 700;
-  font-size: 1.1rem;
-  padding: 8px 16px;
-  transition: all 0.3s ease;
-  border-radius: 50px;
+  padding: 5px 15px;
+  transition: all 0.2s ease;
 }
 
-.navbar-nav .nav-link:hover, 
-.navbar-nav .nav-link.active {
-  background-color: var(--color-primary);
-  color: var(--color-blanco) !important;
-  transform: translateY(-2px); /* Efecto de elevación */
+.navbar-nav .nav-link:hover {
+  color: var(--color-primary) !important;
+  background-color: #eef7ff;
+  border-radius: 20px;
 }
 
-/* --- HEADER (Como el de index.html) --- */
-header {
-  background: linear-gradient(135deg, #88bcf0 0%, #50a6fd 100%);
-  color: white;
-  padding: 3rem 0;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 20px rgba(80, 166, 253, 0.2);
-}
-
-/* --- TARJETAS (CARDS) --- */
+/* --- 4. TARJETAS (CARDS) LLAMATIVAS --- */
 .card {
-  border: none;
+  border: 1px solid rgba(255,255,255,0.5);
   border-radius: var(--borde-radio);
-  background-color: var(--color-blanco);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra flotante */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Para que la imagen no se salga de las curvas */
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--sombra-suave);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1rem; /* Menos espacio entre tarjetas */
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Se levanta al pasar el mouse */
-  box-shadow: 0 15px 30px rgba(77, 170, 231, 0.2);
+  transform: translateY(-3px) scale(1.01); /* Efecto pop sutil */
+  box-shadow: var(--sombra-fuerte);
+  background: #fff;
+  border-color: var(--color-primary); /* Borde azul al pasar el mouse */
+}
+
+.card-body {
+  padding: 1.2rem; /* Menos relleno interno */
 }
 
 .card-title {
   color: var(--color-primary);
   font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
-/* --- ESTILO BLOG (Mejorado de tu original) --- */
+/* --- 5. SECCIÓN DE BLOG --- */
 .blog-texto {
   background-color: var(--color-blanco);
   border-radius: var(--borde-radio);
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(179, 225, 250, 0.4);
-  border-left: 8px solid var(--color-primary);
+  padding: 2rem; /* Más compacto */
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra-suave);
+  border-left: 5px solid var(--color-accent); /* Detalle de color al lado */
 }
 
-/* --- BOTONES --- */
-.btn-primary {
-  background-color: var(--color-primary);
-  border: none;
-  border-radius: 50px;
-  padding: 10px 25px;
+/* --- 6. BOTONES Y DETALLES --- */
+.accordion-button:not(.collapsed) {
+  background-color: #e6f2ff;
+  color: var(--color-primary);
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(77, 170, 231, 0.4);
 }
 
-.btn-primary:hover {
-  background-color: #3598db;
-  transform: scale(1.05);
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--color-primary);
 }
 
-/* --- FOOTER --- */
 footer {
-  background-color: #50a6fd;
+  background: var(--color-secondary);
   color: white;
-  margin-top: 4rem;
-  padding: 2rem 0;
-  font-weight: 600;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+    margin-top: -15px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
 }
