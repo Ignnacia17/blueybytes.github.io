@@ -1,38 +1,38 @@
-/* --- HEADER TIPO HERO (Inicio Impactante) --- */
+/* --- 1. CONFIGURACIÓN GENERAL Y FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;800&display=swap');
+
+:root {
+  /* Paleta de colores vibrante */
+  --color-primary: #0099ff;     /* Azul eléctrico */
+  --color-secondary: #50a6fd;   /* Azul cielo */
+  --color-accent: #ff6b6b;      /* Rojo suave para detalles */
+  --color-texto: #2c3e50;       /* Azul oscuro casi negro */
+  --color-blanco: #ffffff;
+  --borde-radio: 15px;          /* Bordes redondeados */
+  --sombra-suave: 0 4px 6px rgba(0,0,0,0.1);
+  --sombra-fuerte: 0 10px 15px rgba(0,153,255, 0.2);
+}
+
+body {
+  background: linear-gradient(180deg, #f0f8ff 0%, #e6f2ff 100%);
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-texto);
+  font-size: 0.95rem;
+}
+
+/* --- 2. HEADER TIPO "HERO" (EL CAMBIO PRINCIPAL) --- */
 header {
-  /* Degradado vibrante */
   background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
   color: white;
-  padding: 4rem 1rem; /* Más alto para dar importancia */
-  text-align: center; /* Todo centrado */
-  border-bottom-left-radius: 50% 30px; /* Curva decorativa abajo */
+  padding: 4rem 1rem;
+  text-align: center;
+  border-bottom-left-radius: 50% 30px;
   border-bottom-right-radius: 50% 30px;
   margin-bottom: 3rem;
   box-shadow: 0 10px 30px rgba(77, 170, 231, 0.4);
   position: relative;
 }
 
-/* --- LOGO SÚPER LLAMATIVO --- */
-.logo-destacado {
-  width: 200px; /* Tamaño grande */
-  height: 200px;
-  object-fit: cover; /* Asegura que la imagen se vea bien */
-  border-radius: 50%; /* Lo hace circular */
-  border: 6px solid rgba(255, 255, 255, 0.8); /* Borde blanco semitransparente */
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); /* Resplandor/Brillo */
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación con "rebote" */
-  margin-bottom: 1.5rem;
-}
-
-/* Animación al pasar el mouse */
-.logo-destacado:hover {
-  transform: scale(1.1) rotate(3deg); /* Crece y se inclina */
-  border-color: #fff; /* Borde totalmente blanco */
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.7); /* Brillo más intenso */
-  cursor: pointer;
-}
-
-/* Título principal más grande */
 header h1 {
   font-size: 2.8rem;
   font-weight: 800;
@@ -45,5 +45,93 @@ header p {
   font-size: 1.2rem;
   opacity: 0.9;
   max-width: 600px;
-  margin: 0 auto; /* Centrar el texto */
+  margin: 0 auto;
 }
+
+/* --- 3. ESTILOS DEL LOGO ANIMADO --- */
+.logo-destacado {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 1.5rem;
+}
+
+.logo-destacado:hover {
+  transform: scale(1.1) rotate(3deg);
+  border-color: #fff;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+/* --- 4. BARRA DE NAVEGACIÓN FLOTANTE --- */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0;
+  border-radius: 50px;
+  margin: -25px auto 20px auto; /* Sube la barra sobre el header */
+  width: 90%;
+  max-width: 800px;
+  box-shadow: var(--sombra-suave);
+  position: relative; 
+  z-index: 10; /* Asegura que quede por encima del header */
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-texto) !important;
+  font-weight: 700;
+  padding: 5px 15px;
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-primary) !important;
+  background-color: #eef7ff;
+  border-radius: 20px;
+}
+
+/* --- 5. TARJETAS Y CONTENIDO --- */
+.card {
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: var(--borde-radio);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--sombra-suave);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: var(--sombra-fuerte);
+  background: #fff;
+  border-color: var(--color-primary);
+}
+
+.card-title {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-texto {
+  background-color: var(--color-blanco);
+  border-radius: var(--borde-radio);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra-suave);
+  border-left: 5px solid var(--color-accent);
+}
+
+/* --- 6. FOOTER --- */
+footer {
+  background: var(--color-secondary);
+  color: white;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
