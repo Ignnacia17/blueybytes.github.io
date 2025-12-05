@@ -135,3 +135,26 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
   font-weight: 600;
+
+/* ---- */
+/* --- ESTILOS PARA LA SECCIÓN DE HISTORIA --- */
+.historia-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden; /* Para que la imagen respete las esquinas redondas */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.historia-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La imagen llena el espacio sin deformarse */
+  min-height: 300px; /* Altura mínima para que no desaparezca en móviles */
+}
+
+.icono-historia {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
