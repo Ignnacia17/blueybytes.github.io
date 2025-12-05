@@ -1,160 +1,141 @@
-/* --- 1. CONFIGURACIÓN GENERAL Y FUENTES --- */
+/* --- 1. CONFIGURACIÓN GENERAL --- */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;800&display=swap');
 
 :root {
-  /* Paleta de colores vibrante */
-  --color-primary: #0099ff;     /* Azul eléctrico */
-  --color-secondary: #50a6fd;   /* Azul cielo */
-  --color-accent: #ff6b6b;      /* Rojo suave para detalles */
-  --color-texto: #2c3e50;       /* Azul oscuro casi negro */
+  /* Paleta ORIGINAL Pastel (Suave) */
+  --color-header: #88bcf0;      /* Celeste original */
+  --color-navbar: #a0c6f2;      /* Azul barra original */
+  --color-footer: #50a6fd;      /* Azul footer original */
+  --color-fondo: #e0f0ff;       /* Fondo muy clarito original */
+  
+  --color-texto: #445566;       /* Gris azulado para leer bien */
   --color-blanco: #ffffff;
-  --borde-radio: 15px;          /* Bordes redondeados */
-  --sombra-suave: 0 4px 6px rgba(0,0,0,0.1);
-  --sombra-fuerte: 0 10px 15px rgba(0,153,255, 0.2);
+  --borde-radio: 20px;
 }
 
 body {
-  background: linear-gradient(180deg, #f0f8ff 0%, #e6f2ff 100%);
+  background-color: var(--color-fondo); /* Color plano suave */
   font-family: 'Quicksand', sans-serif;
   color: var(--color-texto);
-  font-size: 0.95rem;
 }
 
-/* --- 2. HEADER TIPO "HERO" (EL CAMBIO PRINCIPAL) --- */
+/* --- 2. HEADER (Estilo Hero pero con color suave) --- */
 header {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  background-color: var(--color-header); /* Color original */
   color: white;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
-  border-bottom-left-radius: 50% 30px;
-  border-bottom-right-radius: 50% 30px;
+  border-bottom-left-radius: 40px; /* Curvas menos agresivas */
+  border-bottom-right-radius: 40px;
   margin-bottom: 3rem;
-  box-shadow: 0 10px 30px rgba(77, 170, 231, 0.4);
-  position: relative;
+  box-shadow: 0 4px 15px rgba(136, 188, 240, 0.5); /* Sombra suave celeste */
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.95;
 }
 
-/* --- 3. ESTILOS DEL LOGO ANIMADO --- */
+/* --- 3. LOGO (Más pequeño) --- */
 .logo-destacado {
-  width: 200px;
-  height: 200px;
+  width: 160px;  /* Reducido de 200px a 160px */
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-bottom: 1.5rem;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .logo-destacado:hover {
-  transform: scale(1.1) rotate(3deg);
-  border-color: #fff;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05) rotate(3deg);
   cursor: pointer;
 }
 
-/* --- 4. BARRA DE NAVEGACIÓN FLOTANTE --- */
+/* --- 4. BARRA DE NAVEGACIÓN --- */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(10px);
-  padding: 0.5rem 0;
+  background-color: var(--color-navbar) !important; /* Tu color original */
   border-radius: 50px;
-  margin: -25px auto 20px auto; /* Sube la barra sobre el header */
+  margin: -35px auto 20px auto; /* Flotando sobre el header */
   width: 90%;
-  max-width: 800px;
-  box-shadow: var(--sombra-suave);
-  position: relative; 
-  z-index: 10; /* Asegura que quede por encima del header */
+  max-width: 700px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-nav .nav-link {
-  color: var(--color-texto) !important;
+  color: #0a0000 !important; /* Color oscuro original */
   font-weight: 700;
-  padding: 5px 15px;
+  padding: 8px 16px;
   transition: all 0.2s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--color-primary) !important;
-  background-color: #eef7ff;
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
 
-/* --- 5. TARJETAS Y CONTENIDO --- */
-.card {
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: var(--borde-radio);
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: var(--sombra-suave);
-  transition: all 0.2s ease-in-out;
-  margin-bottom: 1rem;
-}
-
-.card:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: var(--sombra-fuerte);
-  background: #fff;
-  border-color: var(--color-primary);
-}
-
-.card-title {
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.blog-texto {
-  background-color: var(--color-blanco);
-  border-radius: var(--borde-radio);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: var(--sombra-suave);
-  border-left: 5px solid var(--color-accent);
-}
-
-/* --- 6. FOOTER --- */
-footer {
-  background: var(--color-secondary);
-  color: white;
-  margin-top: 2rem;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-
-/* ---- */
-/* --- ESTILOS PARA LA SECCIÓN DE HISTORIA --- */
+/* --- 5. SECCIÓN HISTORIA (Foto controlada) --- */
 .historia-card {
   background: white;
   border-radius: 20px;
-  overflow: hidden; /* Para que la imagen respete las esquinas redondas */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(136, 188, 240, 0.2);
 }
 
 .historia-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* La imagen llena el espacio sin deformarse */
-  min-height: 300px; /* Altura mínima para que no desaparezca en móviles */
+  height: 300px;       /* ALTO FIJO: Esto evita que se vea gigante */
+  object-fit: cover;   /* Recorta la imagen para llenar el espacio sin estirarse */
+  object-position: center; /* Centra la foto */
+}
+
+/* En pantallas grandes, permitimos que sea más alta pero contenida */
+@media (min-width: 992px) {
+  .historia-img {
+    height: 100%;     /* Que ocupe el alto de la tarjeta */
+    max-height: 450px; /* Pero nunca más de esto */
+  }
 }
 
 .icono-historia {
-  font-size: 1.5rem;
-  margin-right: 10px;
-  vertical-align: middle;
+  font-size: 1.4rem;
+  margin-right: 8px;
 }
 
+/* --- 6. FOOTER --- */
+footer {
+  background-color: var(--color-footer); /* Tu color original */
+  color: white;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  font-weight: 600;
+}
+
+/* --- 7. BOTONES --- */
+.btn-primary {
+  background-color: var(--color-footer);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+
+.btn-primary:hover {
+  background-color: #3b8cdb;
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  .logo-destacado { width: 140px; height: 140px; }
+  .historia-img { height: 250px; } /* Foto más chica en celu */
+}
