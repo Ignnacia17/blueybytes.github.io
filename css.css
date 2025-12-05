@@ -1,69 +1,105 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+:root {
+  /* Paleta de colores BlueyBytes */
+  --color-fondo: #eef7ff;     /* Azul muy pálido para el fondo */
+  --color-primary: #4daae7;   /* Azul vibrante del logo */
+  --color-secondary: #88bcf0; /* Azul suave */
+  --color-texto: #445566;     /* Gris azulado para leer mejor que el negro puro */
+  --color-blanco: #ffffff;
+  --borde-radio: 20px;        /* Bordes redondeados para un look suave */
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: 'Quicksand', sans-serif; /* Fuente amigable */
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* --- NAVBAR MEJORADO --- */
+.navbar {
+  background-color: var(--color-blanco) !important;
+  box-shadow: 0 4px 15px rgba(77, 170, 231, 0.15); /* Sombra suave azulada */
+  padding: 1rem 0;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-texto) !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link.active {
+  background-color: var(--color-primary);
+  color: var(--color-blanco) !important;
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* --- HEADER (Como el de index.html) --- */
+header {
+  background: linear-gradient(135deg, #88bcf0 0%, #50a6fd 100%);
+  color: white;
+  padding: 3rem 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 20px rgba(80, 166, 253, 0.2);
+}
+
+/* --- TARJETAS (CARDS) --- */
+.card {
+  border: none;
+  border-radius: var(--borde-radio);
+  background-color: var(--color-blanco);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra flotante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Para que la imagen no se salga de las curvas */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Se levanta al pasar el mouse */
+  box-shadow: 0 15px 30px rgba(77, 170, 231, 0.2);
+}
+
 .card-title {
-  font-size: 2.6rem;
-  color: #2196f3;
-  font-weight: bold;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
+/* --- ESTILO BLOG (Mejorado de tu original) --- */
 .blog-texto {
-  margin: 32px 32px 24px 32px;
-  padding: 24px;
-  background-color: #f4fafd;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px #b3e1fa22;
-  border-left: 6px solid #4daae7;
-  text-align: justify;
-  line-height: 1.7;
+  background-color: var(--color-blanco);
+  border-radius: var(--borde-radio);
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(179, 225, 250, 0.4);
+  border-left: 8px solid var(--color-primary);
 }
 
-/* Más espacio entre la imagen flotante y el texto */
-.blog-texto img.float-end {
-  margin-left: 32px;
-  margin-bottom: 100px;
-  margin-top: 80px; /* imagen más abajo respecto al texto */
-  max-width: 420px;
-  display: block;
+/* --- BOTONES --- */
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(77, 170, 231, 0.4);
 }
 
-/* Mejor espaciado para párrafos */
-.blog-texto p {
-  margin-right: 15px;
-  padding-left: 8px;
+.btn-primary:hover {
+  background-color: #3598db;
+  transform: scale(1.05);
 }
 
-@media (max-width: 991.98px) {
-  .card-title {
-    font-size: 1.5rem;
-  }
-  .blog-texto {
-    padding: 12px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 12px;
-  }
+/* --- FOOTER --- */
+footer {
+  background-color: #50a6fd;
+  color: white;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  font-weight: 600;
 }
-
-@media (max-width: 767.98px) {
-  .blog-texto {
-    margin-left: 12px;
-    margin-right: 12px;
-    padding: 14px;
-  }
-  .blog-texto img.float-end {
-    float: none !important;
-    display: block;
-    margin: 24px auto 18px auto;
-    max-width: 95vw;
-  }
-  .blog-texto p {
-    margin-right: 0;
-    padding-left: 0;
-  }
-}
-.fondo-celeste {
-  background-color: #e0f7fa !important;
-}
-
-
-
-
-
