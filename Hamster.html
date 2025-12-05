@@ -1,94 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="css.css">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 <head>
   <meta charset="UTF-8">
   <title>Hámster | BlueyBytes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-  <body class="bg-info bg-opacity-10">
-    
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link fs-5" href="Erizos.html">Erizo</a></li>
-              <li class="nav-item"><a class="nav-link fs-5" href="Ratas.html">Ratas</a></li>
-              <li class="nav-item"><a class="nav-link fs-5" href="index.html">Inicio</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <div class="container py-5">
-                <div class="card shadow mx-auto" style="max-width: 600px;">
-                  <div class="card-body">
-                    <h3 class="card-title text-warning text-center">
-                      <span style="font-size: 2rem;">🌡️</span> Cuidando a tu hámster del calor y el frío <span style="font-size: 2rem;">🐹💛</span>
-                    </h3>
-                    <p class="mb-3">
-                      Los hámsters son animales pequeños y muy sensibles a los cambios de temperatura. Su organismo no puede regular bien el calor ni el frío extremo, por lo que mantener un ambiente adecuado es fundamental para su bienestar y salud.
-                    </p>
-                    <h5 class="text-primary"><span style="font-size:1.3rem;">🌤️</span> Temperatura ideal</h5>
-                    <ul>
-                      <li>El rango ideal para un hámster está entre <strong>20°C y 24°C</strong>.</li>
-                      <li>Cuando la temperatura sube o baja demasiado, pueden sufrir golpes de calor o de frío, ambos potencialmente peligrosos si no se actúa a tiempo.</li>
-                    </ul>
-                    <h5 class="text-danger mt-4"><span style="font-size:1.3rem;">☀️</span> Golpe de calor: síntomas y qué hacer</h5>
-                    <p class="mb-1"><strong>Síntomas comunes:</strong></p>
-                    <ul>
-                      <li>Jadeo o respiración acelerada</li>
-                      <li>Letargo o falta de movimiento</li>
-                      <li>Tambaleos o debilidad</li>
-                      <li>Cuerpo muy caliente al tacto</li>
-                    </ul>
-                    <p class="mb-1"><strong>Qué hacer:</strong></p>
-                    <ul>
-                      <li>Llévalo a un lugar fresco, ofrécele agua y contacta a un veterinario exótico de inmediato.</li>
-                      <li><strong>Nunca</strong> lo enfríes bruscamente ni uses hielo directo.</li>
-                    </ul>
-                    <h5 class="text-info mt-4"><span style="font-size:1.3rem;">❄️</span> Golpe de frío: síntomas y qué hacer</h5>
-                    <p class="mb-1"><strong>Síntomas comunes:</strong></p>
-                    <ul>
-                      <li>Tiembla constantemente</li>
-                      <li>Duerme en exceso o parece “inconsciente”</li>
-                      <li>Cuerpo frío o rígido</li>
-                    </ul>
-                    <p class="mb-1"><strong>Qué hacer:</strong></p>
-                    <ul>
-                      <li>Abrígalo poco a poco con una manta o tus manos, mantén el ambiente cálido y tranquilo.</li>
-                      <li>Evita fuentes de calor directo, como estufas o secadores.</li>
-                    </ul>
-                    <h5 class="text-success mt-4"><span style="font-size:1.3rem;">🏠</span> Consejos para mantener su temperatura ideal</h5>
-                    <ul>
-                      <li>Mantén su jaula lejos de corrientes de aire o sol directo.</li>
-                      <li>En verano, puedes colocar una baldosa fresca o una botella con agua fría envuelta en tela.</li>
-                      <li>En invierno, usa mantitas, nidos térmicos o casitas cerradas.</li>
-                      <li>Evita los cambios bruscos de temperatura.</li>
-                    </ul>
-                    <h5 class="text-warning mt-4"><span style="font-size:1.3rem;">💛</span> Cuidados que salvan vidas</h5>
-                    <p>
-                      Un pequeño cambio en el ambiente puede marcar la diferencia.<br>
-                      Cuidar la temperatura de tu hámster es cuidar su vida. 🐹✨<br>
-                      Si notas comportamientos extraños o signos de malestar, consulta siempre a un veterinario exótico.
-                    </p>
-                </div>
-      </div>
   
-        <footer class="bg-info text-center py-3 mt-5">
-      <span class="fw-bold text-white">BlueyBytes © 2025</span>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Estilos base por si falla el CSS externo */
+    body { background-color: #e0f0ff; font-family: 'Quicksand', sans-serif; }
+    .card-hover:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+  </style>
+</head>
+<body>
 
+    <header style="background-color: #88bcf0; padding: 2rem 1rem 3rem 1rem; text-align: center; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px;">
+      <div class="container">
+        <img src="Logo Oficial.jpg" alt="Logo BlueyBytes" class="rounded-circle border border-3 border-white shadow-sm" style="width: 100px; height: 100px; object-fit: cover;">
+        <h1 class="fw-bold text-white mt-2" style="font-size: 2rem;">Hámsters</h1>
+      </div>
+    </header>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded-pill mx-auto" style="max-width: 600px; margin-top: -25px; position: relative; z-index: 10;">
+      <div class="container-fluid justify-content-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-3 p-1">
+            <li class="nav-item"><a class="nav-link fw-bold text-primary px-3" href="#">Hámsters</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark px-3" href="Ratas.html">Ratas</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark px-3" href="Erizos.html">Erizos</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark px-3" href="index.html">Inicio</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <div class="container py-5 mt-3"> <div class="card shadow border-0 mx-auto card-hover" style="max-width: 700px; border-radius: 20px;">
+        <div class="card-body p-4 p-lg-5">
+          
+          <h3 class="card-title text-center mb-4" style="color: #f0ad4e; font-weight: 800;">
+            <span style="font-size: 2rem;">🌡️</span> Cuidando a tu hámster del calor y el frío <span style="font-size: 2rem;">🐹</span>
+          </h3>
+          
+          <p class="mb-4 text-muted fs-5">
+            Los hámsters son animales pequeños y muy sensibles a los cambios de temperatura. Su organismo no puede regular bien el calor ni el frío extremo, por lo que mantener un ambiente adecuado es fundamental.
+          </p>
 
+          <hr class="text-muted mb-4">
 
+          <div class="d-flex align-items-start mb-4">
+            <span class="fs-2 me-3">🌤️</span>
+            <div>
+              <h5 class="fw-bold text-primary">Temperatura ideal</h5>
+              <ul class="text-secondary">
+                <li>El rango ideal está entre <strong>20°C y 24°C</strong>.</li>
+                <li>Evita cambios bruscos que puedan causar shocks térmicos.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert alert-danger border-0 shadow-sm" role="alert">
+            <h5 class="fw-bold"><span class="fs-4">☀️</span> Golpe de calor</h5>
+            <p class="mb-2"><strong>Síntomas:</strong> Jadeo, cuerpo caliente, debilidad, falta de movimiento.</p>
+            <p class="mb-0"><strong>Qué hacer:</strong> Llévalo a un lugar fresco, ofrece agua (sin forzar) y contacta a tu vet exótico. 🚫 ¡Nunca uses hielo directo!</p>
+          </div>
+
+          <div class="alert alert-info border-0 shadow-sm mt-4" role="alert" style="background-color: #e3f2fd;">
+            <h5 class="fw-bold text-info-emphasis"><span class="fs-4">❄️</span> Golpe de frío</h5>
+            <p class="mb-2 text-info-emphasis"><strong>Síntomas:</strong> Temblores, letargo (parece dormido pero no despierta), cuerpo frío.</p>
+            <p class="mb-0 text-info-emphasis"><strong>Qué hacer:</strong> Abrígalo con tu calor corporal o mantas. Evita calor directo intenso (secadores muy cerca).</p>
+          </div>
+
+          <div class="mt-4 p-3 bg-light rounded-3">
+            <h5 class="text-success fw-bold">🏠 Tips rápidos</h5>
+            <ul class="mb-0 text-
